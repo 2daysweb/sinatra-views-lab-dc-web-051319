@@ -11,7 +11,7 @@ class App < Sinatra::Base
 	end
 		get '/date' do
 		  time = Time.new
-		  time = time.strftime("%A%B%d/%m/%Y")
+		  time = time.strftime("%A, %d/%m/%Y")
 		  split_time = time.split("/")
 		  @month = split_time[0].strftime("%B")
 		  binding.pry 
