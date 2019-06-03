@@ -12,11 +12,6 @@ class App < Sinatra::Base
 		get '/date' do
 		  time = Time.new
 		  @time = time.strftime("%A %B %d %Y")
-		  binding.pry 
-		  split_time = time.split("/")
-		  @month = split_time[0].strftime("%B")
-		  binding.pry 
-		  
 		erb :date 
 	end
 
